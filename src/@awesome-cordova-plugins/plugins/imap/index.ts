@@ -522,6 +522,19 @@ export class Imap extends AwesomeCordovaNativePlugin {
   getMessageCountByFolderName(folderName: string): Promise<number> {
     return;
   }
+  
+   /**
+   * "searchMessages(folderName: string, query: string, page: number, limit: number)" Searches for messages matching the query inside of a folder.
+   * @param folderName {string} The name of the desired folder.
+   * @param query {string} The query to search for.
+   * @param page {number} Page number.
+   * @param limit {number} Items per page.
+   * @return {Promise<MessageHeaders[]>} Returns a list of message headers containing matching messages.
+   */
+  @Cordova()
+  searchMessages(folderName: string, query: string, page: number, limit: number): Promise<MessageHeaders[]> {
+    return;
+  }
 
   /**
    * "searchMessagesByDatePeriod(folderName: string, dateInMilliseconds: number, comparison: Comparison)" Returns the messages' consecutive number.
